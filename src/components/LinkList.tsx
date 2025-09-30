@@ -1,8 +1,9 @@
 import React, { useMemo, useState, useEffect } from "react";
 import LinkCard from "./LinkCard"; // Import the card component
+import TwitchEmbed from "./TwitchEmbed";
 import { LinkData } from "../types"; // Import the shared type
 import { allLinks } from "../data/links"; // Import the actual link data
-import pfpImage from "../assets/pfp.png";
+import pfpImage from "../assets/pfp2.png";
 import SocialIcons from "./SocialIcons";
 
 /**
@@ -170,7 +171,7 @@ const LinkList: React.FC = () => {
       {renderMobileNav()}
 
       {/* Profile Section with enhanced visual appeal */}
-      <div className="mb-16 flex flex-col items-center">
+      <div className="mb-6 flex flex-col items-center">
         <div className="relative w-32 h-32 mb-4">
           <div className="absolute inset-0 rounded-full overflow-hidden border-2 border-primary/30 dark:border-primary/20 bg-white dark:bg-background">
             <img
@@ -236,6 +237,8 @@ const LinkList: React.FC = () => {
           </div>
         </section>
       )}
+
+      <TwitchEmbed channel="rattecs" parent={["ratte.seweraim.com"]} />
 
       {/* Link Sections with enhanced descriptions */}
       {(!isMobile || activeCategory === null || activeCategory === "social") &&
