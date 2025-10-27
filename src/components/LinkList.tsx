@@ -58,31 +58,31 @@ const LinkList: React.FC = () => {
 
     return (
       <section
-        className="mb-12"
+        className="mb-8 sm:mb-12"
         itemScope
         itemType="https://schema.org/ItemList"
       >
         <meta itemProp="numberOfItems" content={links.length.toString()} />
-        <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-xl bg-white/5 dark:bg-background border border-accent-gray/10 dark:border-accent-gray/20">
+        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+          <div className="p-1 sm:p-2 rounded-lg sm:rounded-xl bg-white/5 dark:bg-background border border-accent-gray/10 dark:border-accent-gray/20">
             {icon}
           </div>
           <div>
             <h2
-              className="text-2xl font-bold text-black dark:text-white"
+              className="text-xl sm:text-2xl font-bold text-black dark:text-white"
               itemProp="name"
             >
               {title}
             </h2>
             {description && (
-              <p className="text-sm text-black/60 dark:text-white/60 mt-1">
+              <p className="text-xs sm:text-sm text-black/60 dark:text-white/60 mt-0.5 sm:mt-1">
                 {description}
               </p>
             )}
           </div>
         </div>
         <div
-          className="grid gap-4"
+          className="grid gap-3 sm:gap-4 grid-cols-1" // Always 1 column on mobile, implicit on larger
           itemProp="itemListElement"
           itemScope
           itemType="https://schema.org/ListItem"
@@ -108,10 +108,10 @@ const LinkList: React.FC = () => {
     if (!isMobile) return null;
 
     return (
-      <div className="sticky top-0 z-20 bg-white/5 dark:bg-background backdrop-blur-sm border-b border-accent-gray/10 dark:border-accent-gray/20 mb-8">
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex items-center justify-between gap-2">
-            <div className="flex overflow-x-auto gap-2 pb-2 -mb-2 flex-1">
+      <div className="sticky top-0 z-20 bg-white/5 dark:bg-background backdrop-blur-sm border-b border-accent-gray/10 dark:border-accent-gray/20 mb-6 sm:mb-8">
+        <div className="container mx-auto px-2 sm:px-4 py-1 sm:py-2">
+          <div className="flex items-center justify-between gap-1 sm:gap-2 overflow-x-auto">
+            <div className="flex gap-1 sm:gap-2 pb-1 sm:pb-2 -mb-1 sm:-mb-2 flex-1 min-w-0">
               {Object.entries(organizedLinks).map(([category, links]) => {
                 if (links.length === 0) return null;
                 return (
@@ -122,7 +122,7 @@ const LinkList: React.FC = () => {
                         activeCategory === category ? null : category
                       )
                     }
-                    className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
+                    className={`px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-colors flex-shrink-0 ${
                       activeCategory === category
                         ? "bg-primary/10 dark:bg-glow/10 text-primary dark:text-glow"
                         : "bg-white/5 dark:bg-background text-black/60 dark:text-white/60 hover:bg-white/10 dark:hover:bg-background/50"
@@ -131,7 +131,7 @@ const LinkList: React.FC = () => {
                   >
                     {category.charAt(0).toUpperCase() + category.slice(1)}
                     {links.length > 0 && (
-                      <span className="ml-1.5 text-xs bg-white/10 dark:bg-background/50 rounded-full px-1.5 py-0.5">
+                      <span className="ml-1 text-[10px] sm:text-xs bg-white/10 dark:bg-background/50 rounded-full px-1 py-0.5 sm:px-1.5 sm:py-0.5">
                         {links.length}
                       </span>
                     )}
@@ -142,12 +142,12 @@ const LinkList: React.FC = () => {
             {activeCategory && (
               <button
                 onClick={() => setActiveCategory(null)}
-                className="p-2 rounded-full bg-white/5 dark:bg-background hover:bg-white/10 dark:hover:bg-background/50 transition-colors"
+                className="p-1 sm:p-2 rounded-full bg-white/5 dark:bg-background hover:bg-white/10 dark:hover:bg-background/50 transition-colors flex-shrink-0"
                 aria-label="Clear filter"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-black/60 dark:text-white/60"
+                  className="h-3 w-3 sm:h-4 sm:w-4 text-black/60 dark:text-white/60"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -166,13 +166,13 @@ const LinkList: React.FC = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8">
+    <div className="min-w-[320px] max-w-3xl mx-auto px-2 sm:px-4 md:px-6 py-4 sm:py-8">
       {/* Mobile Navigation */}
       {renderMobileNav()}
 
       {/* Profile Section with enhanced visual appeal */}
-      <div className="mb-6 flex flex-col items-center">
-        <div className="relative w-32 h-32 mb-4">
+      <div className="mb-4 sm:mb-6 flex flex-col items-center">
+        <div className="relative w-24 h-24 sm:w-32 sm:h-32 mb-3 sm:mb-4">
           <div className="absolute inset-0 rounded-full overflow-hidden border-2 border-primary/30 dark:border-primary/20 bg-white dark:bg-background">
             <img
               src={pfpImage}
@@ -184,13 +184,13 @@ const LinkList: React.FC = () => {
         </div>
 
         <div className="text-center max-w-2xl flex flex-col items-center">
-          <h1 className="text-3xl font-bold text-black dark:text-white mb-3">
+          <h1 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2 sm:mb-3">
             ratte
           </h1>
-          <div className="mb-4">
+          <div className="mb-3 sm:mb-4">
             <SocialIcons />
           </div>
-          <p className="text-base text-black/60 dark:text-white/60 leading-relaxed">
+          <p className="text-sm sm:text-base text-black/60 dark:text-white/60 leading-relaxed px-2 sm:px-0">
             All of my cool links, thank you for your support! :3
           </p>
         </div>
@@ -198,12 +198,12 @@ const LinkList: React.FC = () => {
 
       {/* Featured Section with enhanced visual appeal */}
       {organizedLinks.featured.length > 0 && (
-        <section className="mb-12">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-xl bg-primary/10 dark:bg-glow/10">
+        <section className="mb-8 sm:mb-12">
+          <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+            <div className="p-1 sm:p-2 rounded-lg sm:rounded-xl bg-primary/10 dark:bg-glow/10">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-primary dark:text-glow"
+                className="h-5 w-5 sm:h-6 sm:w-6 text-primary dark:text-glow"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -215,20 +215,20 @@ const LinkList: React.FC = () => {
               </svg>
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-black dark:text-white">
+              <h2 className="text-xl sm:text-2xl font-bold text-black dark:text-white">
                 Featured Links
               </h2>
-              <p className="text-sm text-black/60 dark:text-white/60 mt-1">
+              <p className="text-xs sm:text-sm text-black/60 dark:text-white/60 mt-0.5 sm:mt-1">
                 Check out these highlighted links and offers
               </p>
             </div>
           </div>
-          <div className="grid gap-4">
+          <div className="grid gap-3 sm:gap-4">
             {organizedLinks.featured.map((link) => (
               <div key={link.id} className="relative">
                 <LinkCard link={link} />
-                <div className="absolute -top-2 -right-2">
-                  <div className="px-2 py-1 rounded-full bg-primary/10 dark:bg-glow/10 text-xs font-medium text-primary dark:text-glow">
+                <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2">
+                  <div className="px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full bg-primary/10 dark:bg-glow/10 text-[10px] sm:text-xs font-medium text-primary dark:text-glow">
                     Featured
                   </div>
                 </div>
@@ -238,7 +238,11 @@ const LinkList: React.FC = () => {
         </section>
       )}
 
-      <TwitchEmbed channel="rattecs" parent={["ratte.seweraim.com"]} />
+      <div className="aspect-video w-full mb-8 sm:mb-12">
+        {" "}
+        {/* Responsive wrapper for embed */}
+        <TwitchEmbed channel="rattecs" parent={["ratte.seweraim.com"]} />
+      </div>
 
       {/* Link Sections with enhanced descriptions */}
       {(!isMobile || activeCategory === null || activeCategory === "social") &&
@@ -247,7 +251,7 @@ const LinkList: React.FC = () => {
           organizedLinks.social,
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-primary dark:text-glow"
+            className="h-5 w-5 sm:h-6 sm:w-6 text-primary dark:text-glow"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -264,7 +268,7 @@ const LinkList: React.FC = () => {
           organizedLinks.affiliate,
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-accent dark:text-accent"
+            className="h-5 w-5 sm:h-6 sm:w-6 text-accent dark:text-accent"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -283,7 +287,7 @@ const LinkList: React.FC = () => {
           organizedLinks.steam,
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-primary dark:text-glow"
+            className="h-5 w-5 sm:h-6 sm:w-6 text-primary dark:text-glow"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -302,7 +306,7 @@ const LinkList: React.FC = () => {
           organizedLinks.partner,
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-accent dark:text-accent"
+            className="h-5 w-5 sm:h-6 sm:w-6 text-accent dark:text-accent"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -317,7 +321,7 @@ const LinkList: React.FC = () => {
           organizedLinks.config,
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-primary dark:text-glow"
+            className="h-5 w-5 sm:h-6 sm:w-6 text-primary dark:text-glow"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
