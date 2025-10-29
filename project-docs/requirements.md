@@ -22,10 +22,12 @@
 ### Functional Requirements
 
 1. **Header Section:**
+
    - Prominent display of branding (name, handle, tagline).
    - Include a navigation area if necessary and the dark/light mode toggle.
-  
+
 2. **Content Section:**
+
    - **Social Media & Affiliate Links:**  
      Each link (Twitch, Discord, YouTube, TikTok, Steam, X (Twitter), KICK, tradelink, csfloat, skinport, settings, peripherals, eliteklan, gamerbulk, acezone, skinvault) is presented with:
      - **Clean URL Display and Text Label:** (e.g., "› twitch ‹")
@@ -36,7 +38,8 @@
      Special coupon codes (e.g., code "ratte" for discounts on merch, gamerbulk orders, acezone, skinvault, etc.) with corresponding affiliate links. These sections will be structured with rich snippets that coupon sites and search engines can index, further driving revenue.
 
 3. **Footer Section:**
-   - Contact and additional branding elements, including your email address (ratte@seweraim.com) and social media mentions.
+
+   - Contact and additional branding elements, including your email address (biz@ratte.xyz) and social media mentions.
    - Copyright and any legal disclaimers.
 
 4. **SEO & Content Optimization:**
@@ -79,22 +82,29 @@
 ## Frequently Asked Questions
 
 ### Who am I?
+
 I'm Ratte, a passionate gamer and content creator who loves sharing my gaming experiences and helping others get the best deals on gaming gear and peripherals.
 
 ### What can you find on my website?
+
 You'll find all my social media links, affiliate codes for awesome gaming gear discounts, and my favorite gaming peripherals. Everything is organized to help you easily find what you're looking for.
 
 ### How can I support you?
+
 The best way to support me is by using my affiliate links and codes when shopping for gaming gear. When you use my codes (like "ratte"), you get great discounts and I get a small commission - it's a win-win!
 
 ### Where can I connect with you?
+
 You can find me on Twitch, YouTube, TikTok, and other platforms. Just check out my social links! I'm always happy to chat with fellow gamers.
 
 ### What gaming gear do you recommend?
+
 I've curated a selection of my favorite gaming peripherals and gear. Check out my recommendations - I only share products I truly believe in and use myself.
 
 ### How do I use your discount codes?
+
 Simply enter my code "ratte" at checkout on supported stores like Gamerbulk, Acezone, and SkinVault. The discount will be applied automatically!
 
 ### Can I contact you directly?
-Sure! You can reach me at ratte@seweraim.com. I do my best to respond to all messages, though it might take a little time during busy streaming periods. 
+
+Sure! You can reach me at biz@ratte.xyz. I do my best to respond to all messages, though it might take a little time during busy streaming periods.

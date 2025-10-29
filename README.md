@@ -76,6 +76,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-RatteCS - [ratte@seweraim.com](mailto:ratte@seweraim.com)
+RatteCS - [biz@ratte.xyz](mailto:biz@ratte.xyz)
 
 Project Link: [https://github.com/yourusername/ratte-website](https://github.com/yourusername/ratte-website)

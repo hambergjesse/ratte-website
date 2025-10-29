@@ -13,4 +13,4 @@ Allow: /*.ico
 Allow: /*.json
 Allow: /*.xml
 
-Sitemap: https://ratte.seweraim.com/sitemap.xml 
+Sitemap: https://ratte.xyz/sitemap.xml 

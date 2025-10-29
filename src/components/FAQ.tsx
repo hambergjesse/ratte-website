@@ -35,7 +35,7 @@ const FAQ: React.FC = () => {
     {
       question: "Can I contact you directly?",
       answer:
-        "Yeah, you can email me at ratte@seweraim.com. I'll try to get back to you as soon as I can, but it might take a bit if I'm busy.",
+        "Yeah, you can email me at biz@ratte.xyz. I'll try to get back to you as soon as I can, but it might take a bit if I'm busy.",
     },
   ];
 

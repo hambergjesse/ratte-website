@@ -6,14 +6,14 @@
 - **Bundler/Build Tool:** rspack/rsbuild
 - **Styling:** Tailwind CSS v4 (with support for dark mode and a light mode switch)
 - **Hosting & Deployment:**  
-  The website will be deployed at [https://ratte.seweraim.com/](https://ratte.seweraim.com/) using Cloudflare Pages with the following optimizations:
+  The website will be deployed at [https://ratte.xyz/](https://ratte.xyz/) using Cloudflare Pages with the following optimizations:
   - Automatic HTTPS enforcement
   - Global CDN distribution
   - Edge caching
   - Automatic build and deployment
   - Custom domain support
   - SEO-friendly redirects and headers
-- **SEO Tools:**  
+- **SEO Tools:**
   - Comprehensive meta tags and structured data
   - Sitemap.xml and robots.txt
   - Schema.org markup for affiliate links and products
@@ -24,6 +24,7 @@
 ## Architecture Overview
 
 The MVP is a statically generated, single-page application (SPA) built with:
+
 - **React** for the UI
 - **rspack/rsbuild** for optimized builds
 - **Tailwind CSS** to provide fast, responsive styling with a built-in dark mode/light mode mechanism
@@ -34,6 +35,7 @@ The MVP is a statically generated, single-page application (SPA) built with:
 ## Deployment Configuration
 
 ### Cloudflare Pages Setup
+
 - **Build Command:** `npm run build`
 - **Build Output Directory:** `dist`
 - **Node Version:** 18
@@ -47,6 +49,7 @@ The MVP is a statically generated, single-page application (SPA) built with:
   - Old domain to new domain
 
 ### SEO Configuration
+
 - **Meta Tags:**
   - Title, description, and keywords
   - Open Graph and Twitter Card metadata
@@ -67,12 +70,13 @@ The MVP is a statically generated, single-page application (SPA) built with:
 
 ## Styling & Responsiveness
 
-- **Tailwind CSS:**  
+- **Tailwind CSS:**
+
   - Utilize Tailwind's utility classes to ensure fast development of responsive layouts
   - Implement dark mode using Tailwind's built-in features
   - Ensure that color contrasts, typography, and spacing comply with accessibility standards
 
-- **Responsive Design:**  
+- **Responsive Design:**
   - Use standard Tailwind breakpoints (mobile: ≤640px, tablet: 641px–1024px, desktop: >1024px) to optimize the site layout across all devices
   - Test the design on different browsers and devices to ensure consistency
 
@@ -86,6 +90,7 @@ The MVP is a statically generated, single-page application (SPA) built with:
 ## SEO & Performance Optimizations
 
 - **SEO Considerations:**
+
   - Use semantic HTML5 (including `<header>`, `<nav>`, `<main>`, `<section>`, and `<footer>`)
   - Optimize with metadata: title tags, meta descriptions, canonical links, and structured data (e.g., JSON-LD) specifically designed to support rich snippets for affiliate links and coupon codes
   - Ensure that all images include descriptive alt texts and that ARIA attributes are used where appropriate
@@ -103,7 +108,6 @@ The MVP is a statically generated, single-page application (SPA) built with:
 
 - **Static Analytics (MVP):**
   - Display preset click count placeholders with future plans for integrating more dynamic tracking via tools like Google Analytics or custom scripts
-  
 - **Extensibility:**
   - Future iterations may introduce dynamic content loading from headless CMS or JSON APIs
   - Enhancements could include interactive features for scheduling links or thumbnail updates, to be introduced with serverless functions or a backend as the project scales
@@ -112,6 +116,7 @@ The MVP is a statically generated, single-page application (SPA) built with:
 ## Testing & Deployment
 
 - **Testing:**
+
   - Use unit testing frameworks (Jest and React Testing Library) to validate components
   - Implement end-to-end tests (e.g., using Cypress) to simulate key user flows
   - Confirm cross-browser and cross-device compatibility
@@ -119,6 +124,6 @@ The MVP is a statically generated, single-page application (SPA) built with:
 
 - **Deployment:**
   - Build using rspack/rsbuild to produce an optimized production bundle
-  - Deploy the static site to [https://ratte.seweraim.com/](https://ratte.seweraim.com/) using Cloudflare Pages
+  - Deploy the static site to [https://ratte.xyz/](https://ratte.xyz/) using Cloudflare Pages
   - Configure HTTPS, caching headers, and ensure that 404 fallbacks are managed, without introducing any content protection that could hinder SEO indexing
-  - Monitor deployment status and performance metrics through Cloudflare Pages dashboard 
+  - Monitor deployment status and performance metrics through Cloudflare Pages dashboard

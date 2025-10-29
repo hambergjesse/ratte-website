@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /**
  * Footer component displaying contact information and copyright.
@@ -12,25 +12,49 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col items-center md:items-start text-sm">
             <div className="mb-3">
-              <h2 className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-br from-glow via-primary to-deep">ratte</h2>
-              <p className="text-xs text-dark/50 dark:text-light/50">@rattecs</p>
+              <h2 className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-br from-glow via-primary to-deep">
+                ratte
+              </h2>
+              <p className="text-xs text-dark/50 dark:text-light/50">
+                @rattecs
+              </p>
             </div>
             <p>
-              <a href="mailto:ratte@seweraim.com" className="hover:underline text-deep dark:text-glow transition-colors hover:text-primary dark:hover:text-accent-pink hover-lift inline-block">
-                ratte@seweraim.com
+              <a
+                href="mailto:biz@ratte.xyz"
+                className="hover:underline text-deep dark:text-glow transition-colors hover:text-primary dark:hover:text-accent-pink hover-lift inline-block"
+              >
+                biz@ratte.xyz
               </a>
             </p>
           </div>
         </div>
-        
+
         <div className="w-full border-t border-light/10 dark:border-light/5 my-6"></div>
-        
+
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-dark/40 dark:text-light/40">© {currentYear} All rights reserved.</p>
+          <p className="text-dark/40 dark:text-light/40">
+            © {currentYear} All rights reserved.
+          </p>
           <div className="flex gap-4">
-            <a href="#" className="text-dark/40 dark:text-light/40 hover:text-primary dark:hover:text-glow transition-colors">Terms</a>
-            <a href="#" className="text-dark/40 dark:text-light/40 hover:text-primary dark:hover:text-glow transition-colors">Privacy</a>
-            <a href="#" className="text-dark/40 dark:text-light/40 hover:text-primary dark:hover:text-glow transition-colors">Affiliates</a>
+            <a
+              href="#"
+              className="text-dark/40 dark:text-light/40 hover:text-primary dark:hover:text-glow transition-colors"
+            >
+              Terms
+            </a>
+            <a
+              href="#"
+              className="text-dark/40 dark:text-light/40 hover:text-primary dark:hover:text-glow transition-colors"
+            >
+              Privacy
+            </a>
+            <a
+              href="#"
+              className="text-dark/40 dark:text-light/40 hover:text-primary dark:hover:text-glow transition-colors"
+            >
+              Affiliates
+            </a>
           </div>
         </div>
       </div>
@@ -38,4 +62,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

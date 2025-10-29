@@ -36,7 +36,7 @@ const App: React.FC = () => {
     title: "ratte - links",
     description:
       "Official links and affiliate codes for RatteCS. Find all social media profiles, CS2 settings, and exclusive discount codes in one place.",
-    url: "https://ratte.seweraim.com/",
+    url: "https://ratte.xyz/",
     image: "./assets/og-image.png",
   };
 
@@ -114,14 +114,14 @@ const App: React.FC = () => {
             author: {
               "@type": "Person",
               name: "Ratte",
-              url: "https://ratte.seweraim.com/",
+              url: "https://ratte.xyz/",
             },
             publisher: {
               "@type": "Organization",
               name: "RatteCS",
               logo: {
                 "@type": "ImageObject",
-                url: "https://ratte.seweraim.com/logo.png",
+                url: "https://ratte.xyz/logo.png",
               },
             },
             offers: {
@@ -131,7 +131,7 @@ const App: React.FC = () => {
               seller: {
                 "@type": "Organization",
                 name: "RatteCS",
-                url: "https://ratte.seweraim.com/",
+                url: "https://ratte.xyz/",
               },
             },
             aggregateRating: {
