@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     <footer className="bg-transparent dark:bg-dark/30 backdrop-blur-sm text-dark/60 dark:text-light/60 p-8 mt-12 border-t border-light/20 dark:border-steel/20">
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex flex-col items-center md:items-start text-sm">
+          <div className="flex flex-col items-center md:items-start text-sm text-center md:text-left">
             <div className="mb-3">
               <h2 className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-br from-glow via-primary to-deep">
                 ratte
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
         <div className="w-full border-t border-light/10 dark:border-light/5 my-6"></div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-dark/40 dark:text-light/40">
+          <p className="text-dark/40 dark:text-light/40 text-center md:text-left">
             © {currentYear} All rights reserved.
           </p>
           <div className="flex gap-4">

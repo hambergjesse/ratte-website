@@ -163,12 +163,13 @@ const defaultIcons: Record<string, React.ReactNode> = {
 
 interface LinkCardProps {
   link: LinkData;
+  whiteIcon?: boolean;
 }
 
 /**
  * Component for individual link cards with enhanced SEO and schema.org support.
  */
-const LinkCard: React.FC<LinkCardProps> = ({ link }) => {
+const LinkCard: React.FC<LinkCardProps> = ({ link, whiteIcon = false }) => {
   const {
     title,
     url,
@@ -296,6 +297,21 @@ const LinkCard: React.FC<LinkCardProps> = ({ link }) => {
     return baseSchema;
   };
 
+  // Select the icon
+  let selectedIcon = Object.keys(defaultIcons).find((key) => url.includes(key))
+    ? defaultIcons[Object.keys(defaultIcons).find((key) => url.includes(key))!]
+    : category && defaultIcons[category]
+    ? defaultIcons[category]
+    : defaultIcons.default;
+
+  // Override className if whiteIcon is true
+  let iconElement: React.ReactNode = selectedIcon;
+  if (whiteIcon && React.isValidElement(selectedIcon)) {
+    iconElement = React.cloneElement(selectedIcon as React.ReactElement, {
+      className: "h-6 w-6 text-black dark:text-white",
+    });
+  }
+
   return (
     <>
       {/* Schema.org JSON-LD */}
@@ -357,15 +373,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ link }) => {
                       isHovered ? "bg-primary/10 dark:bg-glow/10" : ""
                     }`}
                   >
-                    {Object.keys(defaultIcons).find((key) => url.includes(key))
-                      ? defaultIcons[
-                          Object.keys(defaultIcons).find((key) =>
-                            url.includes(key)
-                          )!
-                        ]
-                      : category && defaultIcons[category]
-                      ? defaultIcons[category]
-                      : defaultIcons.default}
+                    {iconElement}
                   </div>
                 )}
               </div>

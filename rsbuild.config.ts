@@ -4,7 +4,7 @@ import { pluginReact } from "@rsbuild/plugin-react";
 // const tailwindcss = require('tailwindcss');
 // const autoprefixer = require('autoprefixer');
 
-const pageTitle = "ratte - links";
+const pageTitle = "Ratte - Links";
 const pageDescription =
   "Your central hub for RatteCS social media profiles (Twitch, Discord, YouTube, etc.), affiliate links (Gamerbulk, AceZone, SkinVault), coupon codes, and CS2 config.";
 const pageKeywords =

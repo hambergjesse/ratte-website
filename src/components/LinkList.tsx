@@ -95,7 +95,15 @@ const LinkList: React.FC = () => {
               itemType="https://schema.org/Thing"
             >
               <meta itemProp="position" content={(index + 1).toString()} />
-              <LinkCard link={link} />
+              <LinkCard
+                link={link}
+                whiteIcon={
+                  link.title === "TikTok" ||
+                  link.title === "X (Twitter)" ||
+                  link.title === "Steam" ||
+                  link.title === "Trade Link"
+                }
+              />
             </div>
           ))}
         </div>
@@ -226,7 +234,15 @@ const LinkList: React.FC = () => {
           <div className="grid gap-3 sm:gap-4">
             {organizedLinks.featured.map((link) => (
               <div key={link.id} className="relative">
-                <LinkCard link={link} />
+                <LinkCard
+                  link={link}
+                  whiteIcon={
+                    link.title === "TikTok" ||
+                    link.title === "X (Twitter)" ||
+                    link.title === "Steam" ||
+                    link.title === "Trade Link"
+                  }
+                />
                 <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2">
                   <div className="px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full bg-primary/10 dark:bg-glow/10 text-[10px] sm:text-xs font-medium text-primary dark:text-glow">
                     Featured

@@ -33,7 +33,7 @@ const App: React.FC = () => {
   }, []);
 
   const siteData = {
-    title: "ratte - links",
+    title: "Ratte - Links",
     description:
       "Official links and affiliate codes for RatteCS. Find all social media profiles, CS2 settings, and exclusive discount codes in one place.",
     url: "https://ratte.xyz/",
